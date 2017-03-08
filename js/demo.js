@@ -43,7 +43,7 @@ $(function () {
         }
         showText(index);
     },3000);
-    $content.on({
+    $showBtn.on({
         'mouseover':function () {
             clearInterval(timer);
         },
@@ -58,11 +58,11 @@ $(function () {
             },3000);
         }
     });
-    // $loopNav.find('li').on('mouseover',function () {
-    //     var iNow = $(this).index();
-    //     hideText(index);
-    //     index = iNow;
-    //     showText(index);
-    // })
+    $loopNav.find('li').on('mouseover',function () {
+        var iNow = $(this).index();
+        hideText(index);
+        index = iNow;
+        showText(index);
+    })
 
 });
