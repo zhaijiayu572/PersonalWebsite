@@ -63,6 +63,8 @@ $(function () {
         hideText(index);
         index = iNow;
         showText(index);
+    });
+    $('.menu').on('click',function () {
+        $('#nav-list').slideToggle();
     })
-
 });

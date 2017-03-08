@@ -23,9 +23,15 @@ a{
 #top{
     margin-top: 20px;
 }
+#top .menu{
+    display: none;
+}
 #personal-img{
     height: 100px;
     background: #1b6d85;
+}
+#nav-list{
+    display: block;
 }
 #nav-list li{
     text-align: center;
@@ -140,15 +146,38 @@ a{
     text-shadow: #ff0000 1px 1px 1px;
 }
 @media screen and (max-width: 680px){
+    .nav-container{
+        position: relative;
+    }
     #top .menu{
-        height: 50px;
-        width: 80%;
-        margin: 0 auto;
+        display: block;
+        height: 30px;
+        width: 90%;
+        margin: 20px auto 0;
         z-index: 1;
-        background: #2e6da4;
+        background: #ffffff;
+        opacity: 0.5;
+        text-align: center;
+        line-height: 30px;
     }
     #nav-list{
+        width: 100%;
+        position: absolute;
+        z-index: 10;
         display: none;
+    }
+    #nav-list li{
+        height: 40px;
+        line-height: 40px;
+        width: 80%;
+        margin: 0 auto;
+        background: #fffffe;
+        border-bottom: 1px solid #cccccc;
+        font-weight: 400;
+    }
+    #nav-list li:hover{
+        background: #55C1E5;
+        color: #ffffff;
     }
     #header .head-loop-container .loop-title{
         font-size: 25px;
