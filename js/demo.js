@@ -66,5 +66,13 @@ $(function () {
     });
     $('.menu').on('click',function () {
         $('#nav-list').slideToggle();
+    });
+    $(document).scroll(function () {
+        // var scrollHeight = $(document).height()-$(window).height();
+        // var hrefHeight = (600/$(document).height())*scrollHeight;
+        console.log($(this).scrollTop());
+        if($(this).scrollTop()>400){
+            $('.self-content').children().addClass('show');
+        }
     })
 });

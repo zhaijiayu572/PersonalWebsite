@@ -12,6 +12,7 @@ a{
 .wrapper{
     width: 80%;
     margin: 0 auto;
+    overflow: hidden;
 }
 #header{
     background: url("../img/header.jpg") top center no-repeat;

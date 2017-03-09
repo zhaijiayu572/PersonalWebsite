@@ -1,6 +1,6 @@
 #self-message{
     width: 100%;
-    height: 500px;
+    height: 1000px;
     background: #00bdbd;
     overflow: hidden;
 }
@@ -31,7 +31,14 @@
     background: url("../img/header.jpg") center;
     background-size:  contain;
 }
+.self-content{
+    position: relative;
+}
 .self-content p,.self-content h3{
+    transition: all 1.5s ease;
+    opacity: 0;
+    left: 100%;
+    position: relative;
     width: 100%;
     text-align: center;
     color: #ffffff;
@@ -39,16 +46,54 @@
 .self-content h3{
     font-size: 15px;
 }
+.self-content h3.show{
+    left: 0;
+    opacity: 1;
+}
+
 .self-content .self-name{
+    -moz-transition-delay: 100ms;
     font-size: 30px;
 }
-.self-age,.self-hobbit,.self-aim{
+.self-content .self-name.show{
+    opacity: 1;
+    left: 0;
+}
+.self-content .self-age{
+    -moz-transition-delay: 200ms;
     margin: 10px 0 10px;
     font-size: 20px;
 }
-.self-introduce{
+.self-content .self-age.show{
+    opacity: 1;
+    left: 0;
+}
+.self-content .self-hobbit{
+    margin: 10px 0 10px;
+    font-size: 20px;
+    -moz-transition-delay: 300ms;
+}
+.self-content .self-hobbit.show{
+    opacity: 1;
+    left: 0;
+}
+.self-content .self-aim{
+    margin: 10px 0 10px;
+    font-size: 20px;
+    -moz-transition-delay: 400ms;
+}
+.self-content .self-aim.show{
+    opacity: 1;
+    left: 0;
+}
+.self-content .self-introduce{
+    -moz-transition-delay: 500ms;
     font-size: 16px;
     line-height: 25px;
+}
+.self-content .self-introduce.show{
+    opacity: 1;
+    left: 0;
 }
 @media screen and (max-width: 680px){
     #self-message .self-img-container{
