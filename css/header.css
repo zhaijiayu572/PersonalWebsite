@@ -81,6 +81,10 @@ a{
     /*display: none;*/
 }
 .loop-content li{
+    -o-transition-delay: 300ms;
+    -ms-transition-delay: 300ms;
+    -webkit-transition-delay: 300ms;
+    -moz-transition-delay: 300ms;
     transition-delay: 300ms;
     left: 200%;
 }

@@ -1,6 +1,6 @@
 #self-message{
     width: 100%;
-    height: 1000px;
+    height: 500px;
     background: #00bdbd;
     overflow: hidden;
 }
@@ -10,6 +10,14 @@
     text-align: center;
     font-size: 40px;
     color: #ffffff;
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    transition: all 1s ease;
+}
+#self-message .self-title.show{
+    color: #55C1E5;
 }
 #self-message .self-container{
     margin-top: 30px;
@@ -60,7 +68,11 @@
     left: 0;
 }
 .self-content .self-age{
+    -o-transition-delay: 200ms;
+    -ms-transition-delay: 200ms;
+    -webkit-transition-delay: 200ms;
     -moz-transition-delay: 200ms;
+    transition-delay: 200ms;
     margin: 10px 0 10px;
     font-size: 20px;
 }
@@ -71,7 +83,11 @@
 .self-content .self-hobbit{
     margin: 10px 0 10px;
     font-size: 20px;
+    -o-transition-delay: 300ms;
+    -ms-transition-delay: 300ms;
+    -webkit-transition-delay: 300ms;
     -moz-transition-delay: 300ms;
+    transition-delay: 300ms;
 }
 .self-content .self-hobbit.show{
     opacity: 1;
@@ -80,14 +96,22 @@
 .self-content .self-aim{
     margin: 10px 0 10px;
     font-size: 20px;
+    -o-transition-delay: 400ms;
+    -ms-transition-delay: 400ms;
+    -webkit-transition-delay: 400ms;
     -moz-transition-delay: 400ms;
+    transition-delay: 400ms;
 }
 .self-content .self-aim.show{
     opacity: 1;
     left: 0;
 }
 .self-content .self-introduce{
+    -o-transition-delay: 500ms;
+    -ms-transition-delay: 500ms;
+    -webkit-transition-delay: 500ms;
     -moz-transition-delay: 500ms;
+    transition-delay: 500ms;
     font-size: 16px;
     line-height: 25px;
 }

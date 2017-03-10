@@ -67,11 +67,19 @@ $(function () {
     $('.menu').on('click',function () {
         $('#nav-list').slideToggle();
     });
+    var flag = true;
     $(document).scroll(function () {
         // var scrollHeight = $(document).height()-$(window).height();
         // var hrefHeight = (600/$(document).height())*scrollHeight;
         console.log($(this).scrollTop());
         if($(this).scrollTop()>400){
+            if(flag){
+                $('.self-title').addClass('show');
+                setTimeout(function () {
+                    $('.self-title').removeClass('show');
+                },1000);
+            }
+            flag=false;
             $('.self-content').children().addClass('show');
         }
     })
