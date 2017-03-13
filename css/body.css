@@ -119,6 +119,31 @@
     opacity: 1;
     left: 0;
 }
+#self-achievement{
+    width: 100%;
+    height: 400px;
+}
+#self-achievement .achieve-title{
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    color: #55C1E5;
+}
+#ach-container{
+    position: relative;
+    /*left: -750px;*/
+    height: 300px;
+    width: 1875px;
+    margin-left: 10px;
+}
+#ach-container li{
+    padding: 10px;
+    height:300px;
+    width: 350px;
+    margin-right: 25px;
+    float: left;
+    box-shadow: 2px 2px 2px 2px #ccc;
+}
 @media screen and (max-width: 680px){
     #self-message .self-img-container{
         display: none;
