@@ -42,7 +42,7 @@ $(function () {
             index = 0;
         }
         showText(index);
-    },3000);
+    },5000);
     $showBtn.on({
         'mouseover':function () {
             clearInterval(timer);
@@ -55,7 +55,7 @@ $(function () {
                     index = 0;
                 }
                 showText(index);
-            },3000);
+            },5000);
         }
     });
     $loopNav.find('li').on('mouseover',function () {
@@ -76,11 +76,18 @@ $(function () {
             if(flag){
                 $('.self-title').addClass('show');
                 setTimeout(function () {
-                    $('.self-title').removeClass('show');
+                    $('.self-title').css('color','#fff');
                 },1000);
             }
             flag=false;
             $('.self-content').children().addClass('show');
         }
-    })
+        if($(this).scrollTop()>900){
+            $('.skill-title').addClass('show');
+            setTimeout(function () {
+                $('.skill-title').css('color','#fff');
+            },1000);
+            $('.progress .progress-bar').addClass('show');
+        }
+    });
 });

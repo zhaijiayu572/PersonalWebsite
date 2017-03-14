@@ -5,12 +5,7 @@
   transition: $style $time ease;
 }
 @mixin transition-delay($time){
-  //-webkit-transition-delay:$time;
-  //-moz-transition-delay: $time;
-  //-o-transition-delay: $time;
-  //transition-delay: $time;
   -o-transition-delay: $time;
-  -ms-transition-delay: $time;
   -webkit-transition-delay: $time;
   -moz-transition-delay: $time;
   transition-delay: $time;
@@ -22,7 +17,8 @@
   color: $color;
   @include transition(all,1s);
 }
-
+$self-message-height:500px;
+$my-skill-height:450px;
 $default_color:#fff;
 $active_color:#55C1E5;
 $self-img:'../img/header.jpg';
@@ -42,7 +38,7 @@ $self-img:'../img/header.jpg';
 }
 #self-message{
   width: 100%;
-  height: 500px;
+  height: $self-message-height;
   background: #00bdbd;
   overflow: hidden;
   .self-title{
@@ -121,5 +117,42 @@ $self-img:'../img/header.jpg';
       }
     }
   }
-
+}
+$js:80%;
+$css:70%;
+$node:60%;
+$php:55%;
+#my-skill{
+  width: 100%;
+  background: #4cae4c;
+  height: $my-skill-height;
+  .skill-title{
+    @include section-title($default_color);
+  }
+}
+#skill-panel{
+  width: 70%;
+  .skill-name{
+    font-size: 18px;
+    color: #8a6d3b;
+  }
+  .progress{
+    width: 100%;
+    height: 25px;
+    .progress-bar{
+      width: 0;
+    }
+    .progress-bar-success.show{
+      width: $js;
+    }
+    .progress-bar-info.show{
+      width: $node;
+    }
+    .progress-bar-warning.show{
+      width: $css;
+    }
+    .progress-bar-danger.show{
+      width: $php;
+    }
+  }
 }
