@@ -43,6 +43,7 @@ $(function () {
         }
         showText(index);
     },5000);
+    //给showbtn加上效果，在鼠标悬停时清除定时器
     $showBtn.on({
         'mouseover':function () {
             clearInterval(timer);
@@ -58,28 +59,41 @@ $(function () {
             },5000);
         }
     });
-    $loopNav.find('li').on('mouseover',function () {
-        var iNow = $(this).index();
-        hideText(index);
-        index = iNow;
-        showText(index);
-    });
+    //给下面的导航圆点加上效果悬停时切换轮播图并清除定时器
+    $loopNav.find('li').on(
+        {
+            'mouseover': function () {
+                var iNow = $(this).index();
+                hideText(index);
+                index = iNow;
+                showText(index);
+                clearInterval(timer);
+            },
+            'mouseout':function () {
+                timer = setInterval(function () {
+                    hideText(index);
+                    index++;
+                    if(index>3){
+                        index = 0;
+                    }
+                    showText(index);
+                },5000);
+            }
+
+        });
     $('.menu').on('click',function () {
         $('#nav-list').slideToggle();
     });
-    var flag = true;
+    //监听滚动条事件当滚动条滚动到指定位置时触发相应的效果
     $(document).scroll(function () {
         // var scrollHeight = $(document).height()-$(window).height();
         // var hrefHeight = (600/$(document).height())*scrollHeight;
-        console.log($(this).scrollTop());
+        //触发self-message的文字进入动画
         if($(this).scrollTop()>400){
-            if(flag){
-                $('.self-title').addClass('show');
+            $('.self-title').addClass('show');
                 setTimeout(function () {
-                    $('.self-title').css('color','#fff');
-                },1000);
-            }
-            flag=false;
+                $('.self-title').css('color','#fff');
+            },1000);
             $('.self-content').children().addClass('show');
         }
         if($(this).scrollTop()>900){
@@ -88,6 +102,7 @@ $(function () {
                 $('.skill-title').css('color','#fff');
             },1000);
             $('.progress .progress-bar').addClass('show');
+            $('.skill-tip').addClass('show');
         }
     });
 });
