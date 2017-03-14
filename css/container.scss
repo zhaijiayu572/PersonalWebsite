@@ -1,0 +1,125 @@
+@mixin transition($style,$time){
+  -webkit-transition: $style $time ease;
+  -moz-transition: $style $time ease;
+  -o-transition: $style $time ease;
+  transition: $style $time ease;
+}
+@mixin transition-delay($time){
+  //-webkit-transition-delay:$time;
+  //-moz-transition-delay: $time;
+  //-o-transition-delay: $time;
+  //transition-delay: $time;
+  -o-transition-delay: $time;
+  -ms-transition-delay: $time;
+  -webkit-transition-delay: $time;
+  -moz-transition-delay: $time;
+  transition-delay: $time;
+}
+@mixin section-title($color){
+  width: 100%;
+  text-align: center;
+  font-size: 40px;
+  color: $color;
+  @include transition(all,1s);
+}
+
+$default_color:#fff;
+$active_color:#55C1E5;
+$self-img:'../img/header.jpg';
+@mixin  self-content-style($font-size){
+  opacity: 0;
+  left: 100%;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  color: $default_color;
+  font-size: $font-size;
+  @include transition(all,1.5s);
+}
+@mixin self-content-show(){
+  left: 0;
+  opacity: 1;
+}
+#self-message{
+  width: 100%;
+  height: 500px;
+  background: #00bdbd;
+  overflow: hidden;
+  .self-title{
+    @include section-title($default_color);
+    margin: 30px 0 0;
+  }
+  .self-title.show{
+    color: $active_color;
+  }
+  .self-container{
+    margin-top: 30px;
+    width: 100%;
+    height: 300px;
+    .self-img-container{
+      position: relative;
+      height: 100%;
+      .self-img{
+        position: absolute;
+        height: 300px;
+        width: 225px;
+        top:50%;
+        left: 50%;
+        margin-left: -110px;
+        margin-top: -100px;
+        background: url("#{$self-img}") center;
+        background-size:  contain;
+      }
+    }
+    .self-content{
+      position: relative;
+      .title{
+        @include self-content-style(15px);
+      }
+      .title.show{
+        @include self-content-show();
+      }
+      .self-name{
+        @include self-content-style(30px);
+        @include transition-delay(100ms);
+      }
+      .self-name.show{
+        @include self-content-show();
+      }
+      .self-age{
+        @include self-content-style(20px);
+        @include transition-delay(200ms);
+        margin: 10px 0 10px;
+      }
+      .self-age.show{
+        @include self-content-show();
+      }
+      .self-hobbit{
+        @include self-content-style(20px);
+        @include transition-delay(300ms);
+        margin: 10px 0 10px;
+      }
+      .self-hobbit.show{
+        @include self-content-show();
+      }
+      .self-aim{
+
+        @include self-content-style(20px);
+        @include transition-delay(400ms);
+        margin: 10px 0 10px;
+      }
+      .self-aim.show{
+        @include self-content-show();
+      }
+      .self-introduce{
+        @include self-content-style(16px);
+        @include transition-delay(500ms);
+        line-height: 25px;
+      }
+      .self-introduce.show{
+        @include self-content-show();
+      }
+    }
+  }
+
+}

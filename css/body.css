@@ -60,7 +60,11 @@
 }
 
 .self-content .self-name{
+    -o-transition-delay: 100ms;
+    -ms-transition-delay: 100ms;
+    -webkit-transition-delay: 00ms;
     -moz-transition-delay: 100ms;
+    transition-delay: 100ms;
     font-size: 30px;
 }
 .self-content .self-name.show{

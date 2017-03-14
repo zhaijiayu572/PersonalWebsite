@@ -6,14 +6,23 @@
     <title>翟佳羽的个人网站</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/body.css">
+    <link rel="stylesheet" href="css/container.css">
+    <link rel="stylesheet" href="css/skill.css">
+    <style>
+        .progress .progress-bar{
+            width: 0;
+            transition: all 2s ease;
+        }
+        .progress .progress-bar.show{
+            width: 80%;
+        }
+    </style>
 </head>
 <body>
 <header id="header">
     <div class="wrapper">
         <div id="top" class="row">
             <div id="personal-img" class="col-sm-3">logo</div>
-
             <div class="nav-container col-sm-6 col-sm-offset-3">
                 <div class="menu">菜单</div>
                 <ul id="nav-list" class="row">
@@ -77,6 +86,38 @@
         </div>
     </div>
 </section>
+<section id="my-skill">
+    <div class="wrapper">
+        <h3 class="skill-title">My Skill</h3>
+        <div id="skill-panel">
+            <h3 class="skill-name">JS</h3>
+            <div class="progress">
+                <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="80">
+
+                </div>
+            </div>
+            <h3 class="skill-name">Node</h3>
+            <div class="progress">
+                <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar"  aria-valuemin="0" aria-valuemax="100" >
+
+                </div>
+            </div>
+            <h3 class="skill-name">CSS</h3>
+            <div class="progress">
+                <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar"  aria-valuemin="0" aria-valuemax="100" >
+
+                </div>
+            </div>
+            <h3 class="skill-name">PHP</h3>
+            <div class="progress">
+                <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" >
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
 <section id="self-achievement">
     <div class="wrapper">
         <h3 class="achieve-title">My Achievement</h3>
@@ -113,6 +154,7 @@
     </div>
 </section>
 </body>
+
 <script src="js/jquery-3.1.1.min.js"></script>
 <script src="js/demo.js"></script>
 </html>

@@ -1,0 +1,18 @@
+$default_width:0;
+$default_height:30px;
+$title-size:18px;
+$js:86%;
+$node:80%;
+$css:82%;
+$php:75%;
+#my-skill{
+  background: #4cae4c;
+  height: 400px;
+}
+#skill-panel{
+  width: 70%;
+}
+#skill-panel .skill-name{
+  font-size: $title-size;
+  color: #ffffff;
+}
