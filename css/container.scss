@@ -155,6 +155,9 @@ $php:55%;
       font-size: $min-title-size;
     }
   }
+  .skill-title.show{
+    color: $active_color;
+  }
   .skill-container{
     position: relative;
     overflow: hidden;
@@ -262,22 +265,33 @@ $php:55%;
 }
 $item-content-color:#f3f3f3;
 #self-item{
+  background: #ccc;
   width: 100%;
-  height: 500px;
   @media screen and (max-width: 680px){
       height: auto;
+  }
+  .item-title{
+    margin-top: 20px;
+    @include section-title($default_color);
+    @media screen and (max-width: 680px) {
+      font-size: $min-title-size;
+    }
+  }
+  .item-title.show{
+    color: $active_color;
   }
 }
 $left-arrow:'../img/arrow-left.png';
 $top-arrow:'../img/arrow-top.png';
 #item-container{
-  margin: 0;
+  margin: 0 0 50px 0;
   padding: 0;
-  height: 500px;
+  overflow: hidden;
   width: 100%;
   li{
     float: left;
-    margin-top: 50px;
+    margin-top: 30px;
+    margin-bottom: 20px;
     width: 100%;
     //position: relative;
     @media screen and(max-width: 680px){

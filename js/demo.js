@@ -85,24 +85,34 @@ $(function () {
         $('#nav-list').slideToggle();
     });
     //监听滚动条事件当滚动条滚动到指定位置时触发相应的效果
+    var selfMessageHeight = $('#self-message').offset().top;
+    var selfSkillHeight = $('#my-skill').offset().top;
+    var selfItemHeight = $('#self-item').offset().top;
+
     $(document).scroll(function () {
         // var scrollHeight = $(document).height()-$(window).height();
         // var hrefHeight = (600/$(document).height())*scrollHeight;
         //触发self-message的文字进入动画
-        if($(this).scrollTop()>400){
+        if($(this).scrollTop()>(selfMessageHeight-200)){
             $('.self-title').addClass('show');
                 setTimeout(function () {
                 $('.self-title').css('color','#fff');
             },1000);
             $('.self-content').children().addClass('show');
         }
-        if($(this).scrollTop()>900){
+        if($(this).scrollTop()>(selfSkillHeight-200)){
             $('.skill-title').addClass('show');
             setTimeout(function () {
                 $('.skill-title').css('color','#fff');
             },1000);
             $('.progress .progress-bar').addClass('show');
             $('.skill-tip').addClass('show');
+        }
+        if($(this).scrollTop()>(selfItemHeight-200)){
+            $('.item-title').addClass('show');
+            setTimeout(function () {
+                $('.item-title').css('color','#fff');
+            },1000);
         }
     });
 });
