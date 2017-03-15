@@ -20,6 +20,7 @@
 $min-title-size:25px;
 $self-message-height:500px;
 $my-skill-height:450px;
+$self-item-height:500px;
 $default_color:#fff;
 $active_color:#55C1E5;
 $self-img:'../img/header.jpg';
@@ -257,5 +258,88 @@ $php:55%;
     .progress-bar-danger.show{
       width: $php;
     }
+  }
+}
+$item-content-color:#f3f3f3;
+#self-item{
+  width: 100%;
+  height: 500px;
+  @media screen and (max-width: 680px){
+      height: auto;
+  }
+}
+$left-arrow:'../img/arrow-left.png';
+$top-arrow:'../img/arrow-top.png';
+#item-container{
+  margin: 0;
+  padding: 0;
+  height: 500px;
+  width: 100%;
+  li{
+    float: left;
+    margin-top: 50px;
+    width: 100%;
+    //position: relative;
+    @media screen and(max-width: 680px){
+      margin-top: 30px;
+    }
+    .item-time{
+      height: 120px;
+      .time-content{
+        width: 120px;
+        height: 120px;
+        float: right;
+        border-radius: 60px;
+        background: #00bdbd;
+        text-align: center;
+        line-height: 120px;
+        font-size: 25px;
+        color: #ffffff;
+        @media screen and(max-width: 680px){
+          float: none;
+          margin: 0 auto;
+        }
+      }
+    }
+    .item-info{
+      height: 100%;
+      .left-arrow{
+        width: 15px;
+        height:25px;
+        background: url("#{$left-arrow}") no-repeat;
+        background-size: contain;
+        float: left;
+        margin-top: 50px;
+        @media screen and (max-width: 680px){
+          width: 100%;
+          height: 15px;
+          background: url("#{$top-arrow}") no-repeat center;
+          margin-top: 0;
+        }
+      }
+      .item-content{
+        padding: 0 5px 0 5px;
+        border-radius: 10px;
+        background: $item-content-color;
+        width: 90%;
+        min-height: 200px;
+        min-width: 120px;
+        float: left;
+        @media screen and(max-width: 680px){
+          width: 100%;
+        }
+        .item-name{
+          font-size: 20px;
+          color: #474d5d;
+        }
+        p{
+          font-size: 15px;
+          font-weight: bolder;
+          color: #777777;
+        }
+      }
+    }
+
+
   }
 }
