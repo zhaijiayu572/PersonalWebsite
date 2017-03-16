@@ -39,8 +39,9 @@ $self-img:'../img/header.jpg';
   opacity: 1;
 }
 #self-message{
+  padding-bottom: 50px;
   width: 100%;
-  height: $self-message-height;
+  //height: $self-message-height;
   background: #00bdbd;
   overflow: hidden;
   .self-title{
@@ -148,7 +149,7 @@ $php:55%;
 #my-skill{
   width: 100%;
   background: #4cae4c;
-  height: $my-skill-height;
+  //height: $my-skill-height;
   .skill-title{
     @include section-title($default_color);
     @media screen and (max-width: 680px){
@@ -347,15 +348,24 @@ $top-arrow:'../img/arrow-top.png';
         float: left;
         @media screen and(max-width: 680px){
           width: 100%;
+          .item-tec{
+            font-size: 8px;
+          }
         }
         .item-name{
           font-size: 20px;
           color: #fff;
+          @media screen and(max-width: 680px){
+            font-size: 12px;
+          }
         }
         p{
           font-size: 15px;
           font-weight: bolder;
           color: #777777;
+          @media screen and(max-width: 680px){
+            font-size: 10px;
+          }
         }
       }
     }
@@ -394,11 +404,23 @@ $top-arrow:'../img/arrow-top.png';
     border-radius: 5px;
     float: left;
     color: #ffffff;
+    margin-bottom: 10px;
+    @media screen and (max-width: 680px){
+      padding-top: 0;
+      height:auto;
+      width: 90%;
+    }
     h3{
       font-size: 20px;
+      @media screen and (max-width: 680px){
+        font-size: 12px;
+      }
     }
     p{
       font-size: 14px;
+      @media screen and (max-width: 680px){
+        font-size: 8px;
+      }
       a{
         color: #ffffff;
       }
@@ -409,14 +431,22 @@ $top-arrow:'../img/arrow-top.png';
   }
 }
 #footer{
-  height: 100px;
+  //height: 100px;
+  padding: 10px 0 10px;
   width: 100%;
   text-align: center;
-  line-height: 100px;
   background: #2b2b2b;
   font-size: 15px;
   color: #ffffff;
-  a{
-    color: #ffffff;
+  p{
+    margin: 10px 0 10px;
+    padding: 0;
+    a{
+      color: #ffffff;
+    }
+    @media screen and (max-width: 680px){
+      font-size: 8px;
+    }
   }
+
 }
