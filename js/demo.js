@@ -98,6 +98,7 @@ $(function () {
     $('#nav-list li').on('click',function () {
         var idx = $(this).index();
         scroll(idx);
+        $('#nav-list').slideUp();
     });
     //监听滚动条事件当滚动条滚动到指定位置时触发相应的效果
 

@@ -55,6 +55,11 @@ $self-img:'../img/self-1.jpeg';
   -moz-transition: all 0.8s ease;
   transition: all 0.8s ease;
   display: none;
+  @media screen and (max-width: 680px){
+    right: 40%;
+    z-index: 1;
+    bottom: 0;
+  }
 }
 #top-btn.show{
   display: block;
