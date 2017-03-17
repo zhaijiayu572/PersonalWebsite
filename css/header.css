@@ -46,6 +46,7 @@ a{
     /*line-height: 50px;*/
 }
 #nav-list{
+    margin-top: 40px;
     display: block;
 }
 #nav-list li{

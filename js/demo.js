@@ -1,4 +1,10 @@
 $(function () {
+    var topBtn = $('#top-btn');
+    topBtn.on('click',function () {
+        $('html,body').animate({
+            scrollTop:'0px'
+        },1000);
+    });
     function changeInfo(last,now) {
         var $title = $('.loop-title');
         var $content = $('.loop-content');
@@ -100,6 +106,11 @@ $(function () {
         // var scrollHeight = $(document).height()-$(window).height();
         // var hrefHeight = (600/$(document).height())*scrollHeight;
         //触发self-message的文字进入动画
+        if($(this).scrollTop()>100){
+            topBtn.addClass('show');
+        }else{
+            topBtn.removeClass();
+        }
         if($(this).scrollTop()>(selfMessageHeight-200)){
             $('.self-title').addClass('show');
                 setTimeout(function () {
