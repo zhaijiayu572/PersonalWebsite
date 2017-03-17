@@ -23,7 +23,7 @@ $my-skill-height:450px;
 $self-item-height:500px;
 $default_color:#fff;
 $active_color:#55C1E5;
-$self-img:'../img/header.jpg';
+$self-img:'../img/self-1.jpeg';
 @mixin  self-content-style($font-size){
   opacity: 0;
   left: 100%;
@@ -66,14 +66,15 @@ $self-img:'../img/header.jpg';
       }
       .self-img{
         position: absolute;
-        height: 300px;
+        height: 350px;
         width: 225px;
-        top:50%;
+        //top:50%;
+        top:0;
         left: 50%;
         margin-left: -110px;
-        margin-top: -100px;
+        //margin-top: -100px;
         background: url("#{$self-img}") center;
-        background-size:  contain;
+        background-size:  cover;
       }
     }
     .self-content{

@@ -18,7 +18,8 @@ a{
 #header{
     background: url("../img/header.jpg") top center no-repeat;
     background-size: cover;
-    height: 600px;
+    /*height: 600px;*/
+    padding-bottom: 50px;
     width: 100%;
     overflow: hidden;
 }
@@ -28,9 +29,21 @@ a{
 #top .menu{
     display: none;
 }
-#personal-img{
-    height: 100px;
-    background: #1b6d85;
+#personal-img .self-img{
+    margin: 0 auto;
+    width: 150px;
+    height: 150px;
+    background: url("../img/self-2.jpeg") center no-repeat;
+    background-size: cover;
+    border-radius: 75px;
+    float: right;
+}
+#top .self-info{
+    margin-top: 40px;
+    font-size: 15px;
+    /*color: #ffffff;*/
+    text-align: center;
+    /*line-height: 50px;*/
 }
 #nav-list{
     display: block;
@@ -69,38 +82,95 @@ a{
     height: 60px;
 }
 #header .head-loop-container .loop-title li,.loop-content li{
-    -webkit-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    -ms-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    transition: all 1s ease;
     position: absolute;
     left: 100%;
     top:0;
     opacity: 0;
     width: 100%;
-    /*display: none;*/
+}
+#header .head-loop-container .loop-title li.show{
+    -moz-animation: show 1s ease-out forwards;
+    -o-animation: show 1s ease-out forwards;
+    -webkit-animation: show 1s ease-out forwards;
+    animation: show 1s ease-out forwards;
+}
+#header .head-loop-container .loop-title li.leave{
+    left: 0;
+    opacity: 1;
+    -webkit-animation: hide 1s ease-out forwards;
+    -o-animation: hide 1s ease-out forwards;
+    -moz-animation: hide 1s ease-out forwards;
+    animation: hide 1s ease-out forwards;
+}
+@-webkit-keyframes show {
+    0%{
+        left: 100%;
+        opacity: 0;
+    }
+    100%{
+        left: 0;
+        opacity: 1;
+    }
+}
+@-webkit-keyframes hide {
+    0%{
+        /*left: 0;*/
+        /*opacity: 1;*/
+    }
+    100%{
+        left: -100%;
+        opacity: 0;
+    }
 }
 .loop-content li{
-    -o-transition-delay: 300ms;
-    -ms-transition-delay: 300ms;
-    -webkit-transition-delay: 300ms;
-    -moz-transition-delay: 300ms;
-    transition-delay: 300ms;
+
     left: 200%;
 }
-#header .head-loop-container .loop-title li.show,.loop-content li.show{
-    opacity: 1;
+
+.loop-content li.show{
+    -moz-animation: show2 1s ease-out forwards;
+    -o-animation: show2 1s ease-out forwards;
+    -webkit-animation: show2 1s ease-out forwards;
+    animation: show2 1s ease-out forwards;
+    -o-animation-delay: 300ms;
+    -ms-animation-delay: 300ms;
+    -webkit-animation-delay: 300ms;
+    -moz-animation-delay: 300ms;
+    animation-delay: 300ms;
+}
+
+.loop-content li.leave{
     left: 0;
-    /*display: block;*/
+    opacity: 1;
+    -moz-animation: hide2 1s ease-out forwards;
+    -o-animation: hide2 1s ease-out forwards;
+    -webkit-animation: hide2 1s ease-out forwards;
+    animation: hide2 1s ease-out forwards;
+    -o-animation-delay: 500ms;
+    -ms-animation-delay: 500ms;
+    -webkit-animation-delay: 500ms;
+    -moz-animation-delay: 500ms;
+    animation-delay: 300ms;
 }
-#header .head-loop-container .loop-title li.show.hide{
-    opacity: 0;
-    left: -100%;
+@-webkit-keyframes show2 {
+    0%{
+        left: 200%;
+        opacity: 0;
+    }
+    100%{
+        left: 0;
+        opacity: 1;
+    }
 }
-.loop-content li.hide{
-    opacity: 0;
-    left: -200%;
+@-webkit-keyframes hide2 {
+    0%{
+        /*left: 0;*/
+        /*opacity: 1;*/
+    }
+    100%{
+        left: -200%;
+        opacity: 0;
+    }
 }
 #header .head-loop-container .loop-content{
     height: 80px;
@@ -113,19 +183,50 @@ a{
 }
 #header .head-loop-container .nav-btn{
     height: 40px;
-    width: 100px;
-    margin: 0 auto 0;
+    width: 100%;
     position: relative;
 }
 #header .head-loop-container .nav-btn li{
+    width: 100%;
     position: absolute;
-    left: 0;
+    left: 100%;
     top:0;
+}
+#header .head-loop-container .nav-btn li.show{
+    -moz-animation: show 1s ease-out forwards;
+    -o-animation: show 1s ease-out forwards;
+    -webkit-animation: show 1s ease-out forwards;
+    animation: show 1s ease-out forwards;
+
+    -o-animation-delay: 500ms;
+    -ms-animation-delay: 500ms;
+    -webkit-animation-delay: 500ms;
+    -moz-animation-delay: 500ms;
+    animation-delay: 500ms;
+}
+#header .head-loop-container .nav-btn li.leave{
+    left: 0;
+    opacity: 1;
+    -webkit-animation: hide 1s ease-out forwards;
+    -o-animation: hide 1s ease-out forwards;
+    -moz-animation: hide 1s ease-out forwards;
+    animation: hide 1s ease-out forwards;
+
+    -o-animation-delay: 500ms;
+    -ms-animation-delay: 500ms;
+    -webkit-animation-delay: 500ms;
+    -moz-animation-delay: 500ms;
+    animation-delay: 500ms;
+}
+#header .head-loop-container .nav-btn li .btn{
+    position: absolute;
+    left: 50%;
+    margin-left: -50px;
     height: 40px;
     width: 100px;
     border-radius: 10px;
     border: 2px solid #ffffff;
-    line-height: 35px;
+    line-height: 20px;
     text-align: center;
     font-size: 20px;
     color: #ffffff;
@@ -135,7 +236,7 @@ a{
     -moz-transition: background 0.5s ease;
     transition: background 0.5s ease;
 }
-#header .head-loop-container .nav-btn li:hover{
+#header .head-loop-container .nav-btn li .btn:hover{
     cursor: pointer;
     background: #ffffff;
     color: #55C1E5;
@@ -184,6 +285,9 @@ a{
         text-align: center;
         line-height: 30px;
     }
+    #personal-img .self-img{
+        float: none;
+    }
     #nav-list{
         width: 100%;
         position: absolute;
@@ -209,14 +313,15 @@ a{
     #header .head-loop-container .loop-content{
         width: 70%;
         margin-top: 15px;
-    }
-    #header .head-loop-container .nav-btn{
-        height: 30px;
-        width: 100px;
         font-size: 15px;
-        line-height: 30px;
-        margin-top: 10px;
     }
+    /*#header .head-loop-container .nav-btn{*/
+        /*height: 30px;*/
+        /*width: 100px;*/
+        /*font-size: 15px;*/
+        /*line-height: 30px;*/
+        /*margin-top: 10px;*/
+    /*}*/
     #header .my-aim{
         font-size: 15px;
     }

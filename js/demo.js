@@ -1,93 +1,100 @@
 $(function () {
-    var $title = $('.head-loop-container .loop-title');
-    var $content = $('.head-loop-container .loop-content');
-    var $showBtn = $('.head-loop-container .nav-btn');
-    var width = $('.head-loop-container').width();
-    var $loopNav = $('.head-loop-container .loop-nav');
+    function changeInfo(last,now) {
+        var $title = $('.loop-title');
+        var $content = $('.loop-content');
+        var $btn = $('.nav-btn');
+        $title.find('li').eq(last).removeClass('show').addClass('leave');
+        $title.find('li').eq(now).removeClass('leave').addClass('show');
+        $content.find('li').eq(last).removeClass('show').addClass('leave');
+        $content.find('li').eq(now).removeClass('leave').addClass('show');
+        $btn.find('li').eq(last).removeClass('show').addClass('leave');
+        $btn.find('li').eq(now).removeClass('leave').addClass('show');
+        $('.loop-nav').find('li').eq(now).addClass('show').siblings().removeClass();
+    }
     var index = 0;
-    $showBtn.find('li').not('.show').css({
-        'left':width,
-        'opacity':0
-    });
-    function hideText(index) {
-        $title.find('li').eq(index).addClass('hide');
-        $content.find('li').eq(index).addClass('hide');
-        $showBtn.find('li').eq(index).animate({
-            left:-width,
-            opacity:0
-        },1000,function () {
-            $showBtn.find('li').eq(index).css({
-                left:width
-            })
-        });
-        setTimeout(function () {                 //控制元素在css动画结束后回到最右边
-            $title.find('li').eq(index).removeClass();
-            $content.find('li').eq(index).removeClass();
-        },1000);
-
-    }
-    function showText(index) {
-        $loopNav.find('li').eq(index).addClass('show').siblings().removeClass('show');
-        $title.find('li').eq(index).addClass('show');
-        $content.find('li').eq(index).addClass('show');
-        $showBtn.find('li').eq(index).animate({
-            left:0,
-            opacity:1
-        },1000);
-    }
     var timer = setInterval(function () {
-        hideText(index);
+        var last = index;
         index++;
         if(index>3){
             index = 0;
         }
-        showText(index);
+        changeInfo(last,index);
     },5000);
-    //给showbtn加上效果，在鼠标悬停时清除定时器
-    $showBtn.on({
+    $('.loop-nav li').on({
+        'mouseover':function () {
+            var last = index;
+            index = $(this).index();
+            changeInfo(last,index);
+            clearInterval(timer);
+        },
+        'mouseout':function () {
+            timer = setInterval(function () {
+                var last = index;
+                index++;
+                if(index>3){
+                    index = 0;
+                }
+                changeInfo(last,index);
+            },5000);
+        }
+    });
+    var selfMessageHeight = $('#self-message').offset().top;
+    var selfSkillHeight = $('#my-skill').offset().top;
+    var selfItemHeight = $('#self-item').offset().top;
+    var selfAchieve = $('#self-achievement').offset().top;
+    function scroll(idx) {
+        switch (idx) {
+            case 0:
+                $('html,body').animate({
+                    scrollTop:selfMessageHeight+'px'
+                },1000);
+                break;
+            case 1:
+                $('html,body').animate({
+                    scrollTop:selfSkillHeight+'px'
+                },1000);
+                break;
+            case 2:
+                $('html,body').animate({
+                    scrollTop:selfItemHeight+'px'
+                },1000);
+                break;
+            case 3:
+                $('html,body').animate({
+                    scrollTop:selfAchieve+'px'
+                },1000);
+                break;
+        }
+    }
+    var $btns = $('.nav-btn .btn');
+    $btns.on({
         'mouseover':function () {
             clearInterval(timer);
         },
         'mouseout':function () {
             timer = setInterval(function () {
-                hideText(index);
+                var last = index;
                 index++;
                 if(index>3){
                     index = 0;
                 }
-                showText(index);
+                changeInfo(last,index);
             },5000);
+        },
+        'click':function () {
+            var idx = $btns.index($(this));
+            scroll(idx);
         }
     });
-    //给下面的导航圆点加上效果悬停时切换轮播图并清除定时器
-    $loopNav.find('li').on(
-        {
-            'mouseover': function () {
-                var iNow = $(this).index();
-                hideText(index);
-                index = iNow;
-                showText(index);
-                clearInterval(timer);
-            },
-            'mouseout':function () {
-                timer = setInterval(function () {
-                    hideText(index);
-                    index++;
-                    if(index>3){
-                        index = 0;
-                    }
-                    showText(index);
-                },5000);
-            }
-
-        });
     $('.menu').on('click',function () {
         $('#nav-list').slideToggle();
     });
+    $('#nav-list li').on('click',function () {
+        var idx = $(this).index();
+        scroll(idx);
+    });
     //监听滚动条事件当滚动条滚动到指定位置时触发相应的效果
-    var selfMessageHeight = $('#self-message').offset().top;
-    var selfSkillHeight = $('#my-skill').offset().top;
-    var selfItemHeight = $('#self-item').offset().top;
+
 
     $(document).scroll(function () {
         // var scrollHeight = $(document).height()-$(window).height();
@@ -112,6 +119,12 @@ $(function () {
             $('.item-title').addClass('show');
             setTimeout(function () {
                 $('.item-title').css('color','#fff');
+            },1000);
+        }
+        if($(this).scrollTop()>(selfAchieve-200)){
+            $('.achieve-title').addClass('show');
+            setTimeout(function () {
+                $('.achieve-title').css('color','#fff');
             },1000);
         }
     });
