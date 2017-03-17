@@ -1,0 +1,439 @@
+@charset "UTF-8";
+#self-message {
+  padding-bottom: 50px;
+  width: 100%;
+  background: #00bdbd;
+  overflow: hidden; }
+  #self-message .self-title {
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    color: #fff;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+    margin: 30px 0 0; }
+    @media screen and (max-width: 680px) {
+      #self-message .self-title {
+        font-size: 25px; } }
+  #self-message .self-title.show {
+    color: #55C1E5; }
+  #self-message .self-container {
+    margin-top: 30px;
+    width: 100%;
+    height: 300px; }
+    #self-message .self-container .self-img-container {
+      position: relative;
+      height: 100%; }
+      @media screen and (max-width: 680px) {
+        #self-message .self-container .self-img-container {
+          display: none; } }
+      #self-message .self-container .self-img-container .self-img {
+        position: absolute;
+        height: 350px;
+        width: 225px;
+        top: 0;
+        left: 50%;
+        margin-left: -110px;
+        background: url("../img/self-1.jpeg") center;
+        background-size: cover; }
+    #self-message .self-container .self-content {
+      position: relative; }
+      #self-message .self-container .self-content .title {
+        opacity: 0;
+        left: 100%;
+        position: relative;
+        width: 100%;
+        text-align: center;
+        color: #fff;
+        font-size: 15px;
+        -webkit-transition: all 1.5s ease;
+        -moz-transition: all 1.5s ease;
+        -o-transition: all 1.5s ease;
+        transition: all 1.5s ease; }
+      #self-message .self-container .self-content .title.show {
+        left: 0;
+        opacity: 1; }
+      #self-message .self-container .self-content .self-name {
+        opacity: 0;
+        left: 100%;
+        position: relative;
+        width: 100%;
+        text-align: center;
+        color: #fff;
+        font-size: 30px;
+        -webkit-transition: all 1.5s ease;
+        -moz-transition: all 1.5s ease;
+        -o-transition: all 1.5s ease;
+        transition: all 1.5s ease;
+        -o-transition-delay: 100ms;
+        -webkit-transition-delay: 100ms;
+        -moz-transition-delay: 100ms;
+        transition-delay: 100ms; }
+        @media screen and (max-width: 680px) {
+          #self-message .self-container .self-content .self-name {
+            font-size: 15px; } }
+      #self-message .self-container .self-content .self-name.show {
+        left: 0;
+        opacity: 1; }
+      #self-message .self-container .self-content .self-age {
+        opacity: 0;
+        left: 100%;
+        position: relative;
+        width: 100%;
+        text-align: center;
+        color: #fff;
+        font-size: 20px;
+        -webkit-transition: all 1.5s ease;
+        -moz-transition: all 1.5s ease;
+        -o-transition: all 1.5s ease;
+        transition: all 1.5s ease;
+        -o-transition-delay: 200ms;
+        -webkit-transition-delay: 200ms;
+        -moz-transition-delay: 200ms;
+        transition-delay: 200ms;
+        margin: 10px 0 10px; }
+        @media screen and (max-width: 680px) {
+          #self-message .self-container .self-content .self-age {
+            font-size: 12px; } }
+      #self-message .self-container .self-content .self-age.show {
+        left: 0;
+        opacity: 1; }
+      #self-message .self-container .self-content .self-hobbit {
+        opacity: 0;
+        left: 100%;
+        position: relative;
+        width: 100%;
+        text-align: center;
+        color: #fff;
+        font-size: 20px;
+        -webkit-transition: all 1.5s ease;
+        -moz-transition: all 1.5s ease;
+        -o-transition: all 1.5s ease;
+        transition: all 1.5s ease;
+        -o-transition-delay: 300ms;
+        -webkit-transition-delay: 300ms;
+        -moz-transition-delay: 300ms;
+        transition-delay: 300ms;
+        margin: 10px 0 10px; }
+        @media screen and (max-width: 680px) {
+          #self-message .self-container .self-content .self-hobbit {
+            font-size: 12px; } }
+      #self-message .self-container .self-content .self-hobbit.show {
+        left: 0;
+        opacity: 1; }
+      #self-message .self-container .self-content .self-aim {
+        opacity: 0;
+        left: 100%;
+        position: relative;
+        width: 100%;
+        text-align: center;
+        color: #fff;
+        font-size: 20px;
+        -webkit-transition: all 1.5s ease;
+        -moz-transition: all 1.5s ease;
+        -o-transition: all 1.5s ease;
+        transition: all 1.5s ease;
+        -o-transition-delay: 400ms;
+        -webkit-transition-delay: 400ms;
+        -moz-transition-delay: 400ms;
+        transition-delay: 400ms;
+        margin: 10px 0 10px; }
+        @media screen and (max-width: 680px) {
+          #self-message .self-container .self-content .self-aim {
+            font-size: 12px; } }
+      #self-message .self-container .self-content .self-aim.show {
+        left: 0;
+        opacity: 1; }
+      #self-message .self-container .self-content .self-introduce {
+        opacity: 0;
+        left: 100%;
+        position: relative;
+        width: 100%;
+        text-align: center;
+        color: #fff;
+        font-size: 16px;
+        -webkit-transition: all 1.5s ease;
+        -moz-transition: all 1.5s ease;
+        -o-transition: all 1.5s ease;
+        transition: all 1.5s ease;
+        -o-transition-delay: 500ms;
+        -webkit-transition-delay: 500ms;
+        -moz-transition-delay: 500ms;
+        transition-delay: 500ms;
+        line-height: 25px; }
+        @media screen and (max-width: 680px) {
+          #self-message .self-container .self-content .self-introduce {
+            font-size: 10px; } }
+      #self-message .self-container .self-content .self-introduce.show {
+        left: 0;
+        opacity: 1; }
+
+#my-skill {
+  width: 100%;
+  background: #4cae4c; }
+  #my-skill .skill-title {
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    color: #fff;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease; }
+    @media screen and (max-width: 680px) {
+      #my-skill .skill-title {
+        font-size: 25px; } }
+  #my-skill .skill-title.show {
+    color: #55C1E5; }
+  #my-skill .skill-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 370px;
+    /* tip弹跳的效果 */ }
+    #my-skill .skill-container .skill-tip {
+      position: absolute;
+      right: 0;
+      top: -100px;
+      float: right;
+      width: 25%;
+      background: rgba(243, 255, 170, 0.82);
+      padding: 10px 0 10px;
+      border-radius: 10px;
+      height: 100px; }
+      @media screen and (max-width: 680px) {
+        #my-skill .skill-container .skill-tip {
+          width: 27%;
+          height: 100px; } }
+      #my-skill .skill-container .skill-tip .tip-title {
+        font-size: 15px; }
+        @media screen and (max-width: 680px) {
+          #my-skill .skill-container .skill-tip .tip-title {
+            font-size: 8px; } }
+        #my-skill .skill-container .skill-tip .tip-title .tip-img {
+          margin-left: 10px;
+          height: 20px; }
+        #my-skill .skill-container .skill-tip .tip-title .tip-title-content {
+          margin-left: 10px; }
+      #my-skill .skill-container .skill-tip .tip-content {
+        margin-top: 5px;
+        margin-left: 10px;
+        letter-spacing: 1px;
+        font-size: 15px; }
+        @media screen and (max-width: 680px) {
+          #my-skill .skill-container .skill-tip .tip-content {
+            font-size: 8px; } }
+    #my-skill .skill-container .skill-tip.show {
+      -webkit-animation: tip-animation 1s ease-out forwards; }
+@-webkit-keyframes tip-animation {
+  0% {
+    top: -100px; }
+  30% {
+    top: 80px; }
+  45% {
+    top: 20px; }
+  60% {
+    top: 80px; }
+  70% {
+    top: 45px; }
+  80% {
+    top: 80px; }
+  88% {
+    top: 60px; }
+  100% {
+    top: 80px; } }
+/* 进度条的样式 */
+#skill-panel {
+  float: left;
+  width: 70%; }
+  #skill-panel .skill-name {
+    font-size: 18px;
+    color: #8a6d3b; }
+  #skill-panel .progress {
+    width: 100%;
+    height: 25px; }
+    #skill-panel .progress .progress-bar {
+      width: 0; }
+    #skill-panel .progress .progress-bar-success.show {
+      width: 80%; }
+    #skill-panel .progress .progress-bar-info.show {
+      width: 60%; }
+    #skill-panel .progress .progress-bar-warning.show {
+      width: 70%; }
+    #skill-panel .progress .progress-bar-danger.show {
+      width: 55%; }
+
+#self-item {
+  background: url("../img/self-item.jpg") no-repeat center;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%; }
+  @media screen and (max-width: 680px) {
+    #self-item {
+      height: auto; } }
+  #self-item .item-title {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    color: #fff;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease; }
+    @media screen and (max-width: 680px) {
+      #self-item .item-title {
+        font-size: 25px; } }
+  #self-item .item-title.show {
+    color: #55C1E5; }
+
+#item-container {
+  margin: 0 0 50px 0;
+  padding: 0;
+  overflow: hidden;
+  width: 100%; }
+  #item-container li {
+    float: left;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    width: 100%; }
+    @media screen and (max-width: 680px) {
+      #item-container li {
+        margin-top: 30px; } }
+    #item-container li .item-time {
+      height: 120px; }
+      #item-container li .item-time .time-content {
+        text-shadow: 3px 3px 2px #ccc;
+        width: 120px;
+        height: 120px;
+        float: right;
+        border-radius: 60px;
+        box-shadow: 2px 2px 2px #ccc;
+        text-align: center;
+        line-height: 120px;
+        font-size: 25px;
+        color: #ffffff; }
+        @media screen and (max-width: 680px) {
+          #item-container li .item-time .time-content {
+            float: none;
+            margin: 0 auto; } }
+    #item-container li .item-info {
+      height: 100%; }
+      #item-container li .item-info .left-arrow {
+        width: 15px;
+        height: 25px;
+        background: url("../img/arrow-left.png") no-repeat;
+        background-size: contain;
+        float: left;
+        margin-top: 50px; }
+        @media screen and (max-width: 680px) {
+          #item-container li .item-info .left-arrow {
+            width: 100%;
+            height: 15px;
+            background: url("../img/arrow-top.png") no-repeat center;
+            margin-top: 0; } }
+      #item-container li .item-info .item-content {
+        border: 1px solid #cccccc;
+        box-shadow: 5px 3px 5px #ccc;
+        padding: 0 10px 0 10px;
+        border-radius: 10px;
+        width: 90%;
+        min-height: 200px;
+        min-width: 120px;
+        float: left; }
+        @media screen and (max-width: 680px) {
+          #item-container li .item-info .item-content {
+            width: 100%; }
+            #item-container li .item-info .item-content .item-tec {
+              font-size: 8px; } }
+        #item-container li .item-info .item-content .item-name {
+          font-size: 20px;
+          color: #fff; }
+          @media screen and (max-width: 680px) {
+            #item-container li .item-info .item-content .item-name {
+              font-size: 12px; } }
+        #item-container li .item-info .item-content p {
+          font-size: 15px;
+          font-weight: bolder;
+          color: #777777; }
+          @media screen and (max-width: 680px) {
+            #item-container li .item-info .item-content p {
+              font-size: 10px; } }
+
+#self-achievement {
+  width: 100%;
+  background: url("../img/self-item.jpg") no-repeat center;
+  background-attachment: fixed;
+  background-size: cover;
+  padding-bottom: 50px; }
+  #self-achievement .achieve-title {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    color: #fff;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease; }
+    @media screen and (max-width: 680px) {
+      #self-achievement .achieve-title {
+        font-size: 25px; } }
+  #self-achievement .achieve-title.show {
+    color: #55C1E5; }
+
+#ach-container {
+  margin-top: 20px;
+  width: 100%; }
+  #ach-container li {
+    height: 300px;
+    width: 40%;
+    padding: 10px 5%;
+    box-shadow: 5px 5px 5px #ccc;
+    margin-top: 20px;
+    margin-right: 5%;
+    margin-left: 5%;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    float: left;
+    color: #ffffff;
+    margin-bottom: 10px; }
+    @media screen and (max-width: 680px) {
+      #ach-container li {
+        padding-top: 0;
+        height: auto;
+        width: 90%; } }
+    #ach-container li h3 {
+      font-size: 20px; }
+      @media screen and (max-width: 680px) {
+        #ach-container li h3 {
+          font-size: 12px; } }
+    #ach-container li p {
+      font-size: 14px; }
+      @media screen and (max-width: 680px) {
+        #ach-container li p {
+          font-size: 8px; } }
+      #ach-container li p a {
+        color: #ffffff; }
+      #ach-container li p a:hover {
+        color: #55C1E5; }
+
+#footer {
+  padding: 10px 0 10px;
+  width: 100%;
+  text-align: center;
+  background: #2b2b2b;
+  font-size: 15px;
+  color: #ffffff; }
+  #footer p {
+    margin: 10px 0 10px;
+    padding: 0; }
+    #footer p a {
+      color: #ffffff; }
+    @media screen and (max-width: 680px) {
+      #footer p {
+        font-size: 8px; } }
+
+/*# sourceMappingURL=container.css.map */
